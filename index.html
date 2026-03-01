@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Svatba Anety & Radka</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body id="top">
+
+<nav class="navbar">
+
+    <a href="#top" class="logo">A & R</a>
+
+    <ul>
+        <li><a href="#info">Kdy a kde</a></li>
+        <li><a href="#hlasovani">Hlasování</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+    </ul>
+
+    <button id="music-btn">🎵</button>
+
+</nav>
+
+
+<header class="hero">
+
+    <div class="hero-container">
+
+        <div class="hero-image">
+            <img src="images/header2.png" alt="Aneta a Radek">
+        </div>
+
+        <div class="hero-text">
+            <h1>Svatba</h1>
+            <h2>Anety & Radka</h2>
+            <p>6. června 2026</p>
+        </div>
+
+    </div>
+
+</header>
+
+
+<section id="info" class="info-section">
+
+    <div class="info-wrapper">
+
+        <h2>Kdy & Kde</h2>
+
+        <div class="event-cards">
+
+            <div class="event-card">
+
+                <h3>💍 Obřad</h3>
+                <p><strong>Datum:</strong> Sobota 6. června 2026</p>
+                <p><strong>Čas:</strong> 13:00</p>
+                <p><strong>Místo:</strong> Radnice města Blanska</p>
+                <p>nám. Svobody 32/3<br>678 01 Blansko</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps?q=nám.+Svobody+32/3,+Blansko&output=embed" loading="lazy"></iframe>
+                </div>
+
+            </div>
+
+
+            <div class="event-card">
+
+                <h3>🍽️ Hostina</h3>
+                <p><strong>Čas:</strong> 14:00</p>
+                <p><strong>Místo:</strong> Obůrka 17</p>
+                <p>Obůrka 17<br>678 01 Blansko 1</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps?q=Obůrka+17,+Blansko&output=embed" loading="lazy"></iframe>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="transport-box">
+
+            <h3>🚍 Doprava</h3>
+            <p>
+            Pro všechny hosty je zajištěna autobusová doprava z Písečné na radnici
+            a po obřadu společný odjezd do restaurace.
+            </p>
+
+            <p>
+            Z Obůrky je zajištěn rozvoz osobním automobilem.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="photo-row">
+
+    <div class="photo-container">
+        <img src="images/photo1.jpg" alt="Foto 1">
+    </div>
+
+    <div class="photo-container">
+        <img src="images/photo2.jpg" alt="Foto 2">
+    </div>
+
+</section>
+
+
+<section id="hlasovani" class="rsvp-section">
+
+    <div class="rsvp-wrapper">
+
+        <h2>RSVP & Hlasování</h2>
+
+        <p class="rsvp-subtitle">
+        Prosíme potvrďte svou účast a vyberte si oběd nejpozději do 1. května 2026.
+        </p>
+
+        <div class="form-card">
+
+            <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfhLflNCjfGRwybROnSuI-S1WgJ0_SYlq_-Xj-8GZVSwlpVbA/viewform?embedded=true"
+            width="100%"
+            height="800"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0">
+            Načítání…
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="galerie" class="gallery-section">
+
+    <div class="gallery-wrapper">
+
+        <h2>Fotogalerie</h2>
+
+        <div class="gallery-placeholder">
+
+            <div class="gallery-icon">📸</div>
+
+            <h3>Fotografie budou přidány po svatbě</h3>
+
+            <p>
+            Po našem velkém dni zde najdete společné vzpomínky,
+            zachycené okamžiky radosti a lásky.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="footerbg">
+
+    <div class="footer-bg">
+
+        <img src="images/footerbg.jpg" alt="Foto 2">
+
+        <p class="footer-text">
+        Ahoj! Připravte se na den plný lásky, smíchu a tance, který možná nebude úplně podle plánu...
+        ale bude nezapomenutelný! My už se nemůžeme dočkat, až vás tam uvidíme.
+        </p>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>© 2026 Aneta & Radek</p>
+</footer>
+
+
+<audio id="bg-music" loop>
+    <source src="music/hudba.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+
+const music = document.getElementById("bg-music");
+const btn = document.getElementById("music-btn");
+
+let playing = false;
+
+btn.addEventListener("click", () => {
+
+    if (!playing) {
+        music.volume = 0.2;
+        music.play();
+        btn.textContent = "🔊";
+        playing = true;
+    }
+
+    else {
+        music.pause();
+        btn.textContent = "🎵";
+        playing = false;
+    }
+
+});
+
+</script>
+
+</body>
+</html>
