@@ -13,6 +13,10 @@ body {
     scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 /* ===== NAVBAR ===== */
 
 .navbar {
@@ -261,7 +265,7 @@ footer {
     border-right: none;
     display: flex;
     gap: 30px;
-    padding: 100px;
+    padding: 60px 30px;
     background: url("images/photobg.jpg") center/cover no-repeat;
 }
 
